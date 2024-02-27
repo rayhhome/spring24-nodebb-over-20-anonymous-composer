@@ -706,6 +706,7 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				anonymous: false,
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -715,6 +716,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
+				anonymous: false,
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -728,6 +730,7 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				anonymous: false,
 			};
 		}
 		var submitHookData = {
@@ -798,12 +801,6 @@ define('composer', [
 
 	async function postAnonymously(post_uuid) {
 		var postData = composer.posts[post_uuid];
-		// Make the user anonymous by setting them to uid 0
-		postData.uid = 0;
-		postData.username = '[[global:guest]]';
-		postData.handle = '[[global:guest]]';
-		postData.isMain = true;
-
 		var postContainer = $('.composer[data-uuid="' + post_uuid + '"]');
 		var handleEl = postContainer.find('.handle');
 		var titleEl = postContainer.find('.title');
@@ -877,6 +874,7 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				anonymous: true,
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -886,6 +884,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
+				anonymous: true,
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -899,6 +898,7 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				anonymous: true,
 			};
 		}
 		var submitHookData = {
