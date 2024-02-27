@@ -1,6 +1,6 @@
-# Default Composer for NodeBB
+# Anonymous Composer for NodeBB
 
-This plugin activates the default composer for NodeBB. It is activated by default, but can be swapped out as necessary.
+This plugin activates the anonymous composer for NodeBB. Needs to be activated in admin settings. Supports anonymous posting compared with the default composer.
 
 ## Screenshots
 
