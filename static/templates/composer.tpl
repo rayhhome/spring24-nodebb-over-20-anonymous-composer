@@ -18,7 +18,12 @@
 				<i class="fa fa-clock-o"></i>
 			</div>
 			<div class="btn-group">
+				<ul class="dropdown-menu dropdown-menu-right"">{{{ each submitOptions }}}<li><a href="#" class="{./class}" data-action="{./action}">{./text}</a></li>{{{ end }}}</ul>
 				<button class="btn btn-sm btn-primary composer-submit" data-action="post" tabindex="-1"><i class="fa fa-chevron-right"></i></button>
+				<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="caret"></span>
+					<span class="sr-only">[[topic:composer.additional-options]]</span>
+				</button>
 			</div>
 		</nav>
 		<div class="row title-container">
