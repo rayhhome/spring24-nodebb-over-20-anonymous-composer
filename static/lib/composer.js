@@ -475,10 +475,10 @@ define('composer', [
 			submitOptions: [
 				// Add items using `filter:composer.create`, or just add them to the <ul> in DOM
 				{
-					class: "composer-submit-anonymously",
-					action: "postAnonymously",
+					class: 'composer-submit-anonymously',
+					action: 'postAnonymously',
 					text: 'Submit Anonymously',
-				}
+				},
 			],
 		};
 
