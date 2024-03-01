@@ -2,7 +2,7 @@
 
 This plugin activates the anonymous composer for NodeBB. Needs to be activated in admin settings. Supports anonymous posting compared with the default composer. This composer plugin is modified based on the orignal Nodebb composer plugin.
 
-All credits to the NodeBB team.
+This plugin is created for educational purpose. All credits to the NodeBB team.
 
 ## Screenshots
 
