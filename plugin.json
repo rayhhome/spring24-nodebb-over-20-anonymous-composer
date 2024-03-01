@@ -1,6 +1,6 @@
 {
 	"id": "nodebb-plugin-composer-anonymous",
-	"url": "https://github.com/rayhello0/nodebb-plugin-composer-anonymous",
+	"url": "https://github.com/rayhhome/spring24-nodebb-over-20-anonymous-composer",
 	"library": "library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
