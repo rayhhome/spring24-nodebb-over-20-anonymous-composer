@@ -55,7 +55,7 @@ $(document).ready(function () {
 	$(window).on('action:composer.addQuote', function (ev, data) {
 		if (config['composer-anonymous'].composeRouteEnabled !== 'on') {
 			require(['composer'], function (composer) {
-				var topicUUID = composer.findByTid(data.tid);
+				let topicUUID = composer.findByTid(data.tid);
 				composer.addQuote(data.tid, data.pid, data.selectedPid, data.topicName, data.username, data.text, topicUUID);
 			});
 		} else {
