@@ -1,7 +1,7 @@
 'use strict';
 
 define('admin/plugins/composer-anonymous', ['settings', 'alerts'], function (Settings, alerts) {
-	let ACP = {};
+	const ACP = {};
 
 	ACP.init = function () {
 		Settings.load('composer-anonymous', $('.composer-anonymous-settings'));
